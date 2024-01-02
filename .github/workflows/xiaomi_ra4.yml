@@ -95,6 +95,8 @@ jobs:
         cd openwrt
         make defconfig
         make download -j8
+        git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+        make defconfig
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
