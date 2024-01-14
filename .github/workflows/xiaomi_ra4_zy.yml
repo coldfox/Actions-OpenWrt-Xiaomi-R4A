@@ -107,12 +107,12 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
 
-        git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-        echo "CONFIG_PACKAGE_luci-app-oaf=y" >>.config
-        make defconfig
+        # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+        # echo "CONFIG_PACKAGE_luci-app-oaf=y" >>.config
+        # make defconfig
 
-        make package/luci-app-oaf/compile V=s 
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        # make package/luci-app-oaf/compile V=s 
+        # make -j$(nproc) || make -j1 || make -j1 V=s
         
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
