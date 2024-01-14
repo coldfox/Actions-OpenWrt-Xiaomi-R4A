@@ -11,7 +11,7 @@
 #
 
 # 取消插件注释
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # 添加插件源码
 # sed -i '$a src-git ddnsto https://github.com/linkease/ddnsto-openwrt' feeds.conf.default
@@ -22,7 +22,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # 添加插件源码
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # passwall依赖
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+# sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 ### 修改主题文件
 rm -rf package/lean/luci-theme-argon
